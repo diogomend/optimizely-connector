@@ -1,0 +1,38 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Optimizely Connector",
+        "description": "Implentation of feature flag gateway in Laravel",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000",
+            "description": "API Server"
+        }
+    ],
+    "paths": {
+        "/active": {
+            "get": {
+                "description": "Get active feature flags",
+                "operationId": "App\\Http\\Controllers\\OptimizelyController::active",
+                "responses": {
+                    "200": {
+                        "description": "Get list of active feature flags from the request"
+                    }
+                }
+            }
+        },
+        "/feature/:featureName": {
+            "get": {
+                "description": "Verify if specific feature flag is active",
+                "operationId": "App\\Http\\Controllers\\OptimizelyController::feature",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}
